@@ -1,0 +1,13 @@
+<h1>I'm a cool duck</h1>
+
+<p>My name is <%= @duck.name %> :)</p>
+<p>I am a <%= @duck.description %> <3</p>
+<p>My super cool student is <%= @duck.student.name %>!!</p>
+<br>
+<br>
+<%= link_to "Edit Duck", edit_duck_path(@duck) %>
+<br>
+<br>
+<%= button_to "Delete Duck", duck_path(@duck), method: :delete %>
+<br>
+<%= link_to "Index", ducks_path %>

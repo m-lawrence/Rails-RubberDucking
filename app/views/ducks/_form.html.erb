@@ -1,0 +1,14 @@
+<% if flash[:my_errors] %>
+    <% flash[:my_errors].each do |error| %>
+        <p style="color: red;"><strong><%= error %></strong></p>
+        <% end %>
+        <% end %>
+<%= form_for @duck do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.label :student_id %>
+    <%= f.number_field :student_id %>
+    <%= f.submit %>
+    <% end %>

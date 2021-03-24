@@ -1,0 +1,17 @@
+<h1>I'm a cool student</h1>
+
+<p>My name is <%= @student.name %> :)</p>
+<p>I am in mod <%= @student.mod%> <3</p>
+<p>My super cool ducks are: <% @student.ducks.each do |duck| %>
+    <ul><li><%= duck.name %></li></ul>
+    <% end %>
+<br>
+<br>
+<br>
+<%= link_to "Edit Student", edit_student_path(@student) %>
+<br>
+<br>
+<%= button_to "Delete Student", student_path(@student), method: :delete %>
+<br>
+<br>
+<%= link_to "Index", students_path %>
